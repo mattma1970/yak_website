@@ -1,0 +1,254 @@
+body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Poppins', 'Arial', sans-serif;
+    background-color: #ffffff; /* Set background color to white */
+    display: flex;
+    flex-direction: column; /*Stacks children vertically*/
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    min-width: 330px;
+}
+
+/* Desktop defaults */
+
+.brand-name {
+    font-size: 3rem; /* Adjust the size as needed */
+    font-weight: bold;
+    letter-spacing: 0.2rem; /* Adds spacing between the characters */
+    word-spacing: 0.5rem; /* Adds spacing between the words */
+    text-transform: uppercase;
+}
+
+.container {
+    text-align: center;
+    padding: 50px;
+    max-width: 1024px
+}
+
+.image-carousel {
+    display: none;
+}
+
+.images-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* You can adjust the gap as needed */
+    flex-wrap: wrap;
+    align-items: flex-start; /* Align images to the top */
+    flex: 0 1 auto; /* Allows the slides to grow and shrink but not to fill all space */
+}
+
+.images-container img {
+    width: calc(33.333% - 20px); /* Adjust the width minus the gap divided among images */
+    max-height: 1600px; /* You can set a max height for all images */
+    object-fit: cover; /* This will ensure the images cover the area nicely */
+    flex: 0 0 100%
+}
+
+.resized-image {
+    width: 280px;
+    height: auto;
+}
+
+.attribution {
+    color: #333;
+    font-size:8px;
+    padding: 1px;
+}
+.tagline {
+    color: #333;
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 0 20px;
+}
+
+.key-points {
+    margin-top: 20px;
+    display: inline-block;
+    text-align: left;
+}
+
+.key-points p {
+    color: #555;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.key-points i {
+    color: #4CAF50;
+    margin-right: 5px;
+}
+
+.interest-form {
+    margin-top: 20px;
+}
+
+.interest-form input[type="email"] {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px; /* Fixed width for input fields */
+}
+
+.interest-form button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: auto; /* Auto width for button */
+}
+
+.interest-form button:disabled {
+    opacity: 0.3;
+}
+
+/* Remove when button is enabled
+.interest-form button:hover {
+    background-color: #45a049;
+}
+*/
+
+.watch-this-space {
+    margin-top: 30px;
+    color: #555;
+    font-style: italic;
+}
+
+.communcations {
+    display: inline-block;
+    margin: auto;
+}
+
+.contact-us {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #4CAF50; /* Color can be adjusted to fit the design */
+    text-decoration: none;
+}
+
+.contact-us:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f9fa; /* Light grey background, can be changed */
+    border-top: 1px solid #e7e7e7; /* Light grey border, can be changed */
+}
+
+.footer p {
+    color: #333;
+    margin: 0;
+    font-size: 16px;
+}
+
+.footer p {
+    color: #333;
+    margin: 0;
+    font-size: 16px;
+}
+
+    
+/* Make sure to include responsive adjustments if needed for smaller screens */
+@media (max-width: 768px) {
+    body {
+        padding-top: 10px; /* Adjusted height for your header on smaller screens */
+    }
+
+    .brand-name {
+        font-size: 2.4rem; /* Adjust the size as needed */
+        font-weight: bold;
+        letter-spacing: 0.1rem; /* Adds spacing between the characters */
+        word-spacing: 0.2rem; /* Adds spacing between the words */
+        text-transform: uppercase;
+    }
+
+    .container {
+        text-align: center;
+        padding: 30px;
+        max-width: 768px
+    }
+
+    .image-container {  /* hidde the triptich and display the carousel */
+        display: none;
+    }
+    .image-carousel {
+        display: flex; /* New line */
+        align-items: center; /* Align vertically */
+        justify-content: centre; /* space-between; Puts space between the navigation buttons and image */
+        max-width: 100%;
+        margin: auto;
+        justify-content: center;
+    }
+
+    .carousel-slides {
+        display: flex;
+        flex: 0 1 auto; /* Allows the slides to grow and shrink but not to fill all space */
+    }
+
+    .carousel-slide {
+        flex: 0 0 100%; /* Do not grow, do not shrink, base width is 100% of the parent */
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .carousel-slide img {
+        max-width: 100%;
+        height: auto;
+    }
+
+
+    .tagline {
+        color: #333;
+        margin-top: 15px;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .key-points {
+        margin-top: 15px;
+        display: inline-block;
+        text-align: left;
+    }
+
+    .key-points p {
+        color: #555;
+        font-size: 14px;
+        margin: 8px 0;
+    }
+
+    .footer p {
+        color: #333;
+        margin: 0;
+        font-size: 14px; /* shrink the footer font. */
+    }
+}
+
+@media (max-width: 387px) {
+    .brand-name {
+        font-size: 2.1rem; /* Adjust the size as needed */
+        font-weight: bold;
+        letter-spacing: 0.01rem; /* Adds spacing between the characters */
+        word-spacing: 0.1rem; /* Adds spacing between the words */
+        text-transform: uppercase;
+    }
+    .resized-image {
+        width: 250px;
+        height: auto;
+    }
+
+}
